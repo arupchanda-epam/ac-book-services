@@ -1,14 +1,13 @@
 package com.book.management.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Table(name="books")
 @Entity
 public class Book {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bookid;
     private String bookname;
     private String author;
